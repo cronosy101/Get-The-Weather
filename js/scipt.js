@@ -24,7 +24,7 @@ getLoacationByIp();
 async function getLatLon(city) {
   try {
     const res = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${city},NL&limit=5&appid=${myApi}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city},NL&limit=5&appid=${myApi}`
     );
 
     if (!res.ok) {
