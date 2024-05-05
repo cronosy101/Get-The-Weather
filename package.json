@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.75.0"
+  },
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "sass:build": "sass scss:css",
+    "sass:watch": "sass --watch scss:css"
+  },
+  "keywords": [],
+  "author": "RS",
+  "license": "ISC",
+  "description": ""
+}

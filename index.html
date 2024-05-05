@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--leaflet map link-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- main-container -->
+    <div
+      id="main-container"
+      class="container-fluid d-flex flex-column justify-content-center m-0 p-0"
+    >
+      <!--banner  -->
+      <div
+        id="banner"
+        class="d-flex flex-row align-items-center justify-content-start p-2"
+      >
+        <img
+          src="./images/weather-app-logo-003.png"
+          id="logo"
+          alt="site logo"
+        />
+        <h1 class="m-0 text-center">Get The Weather</h1>
+      </div>
+
+      <!-- search-box -->
+      <div class="d-flex justify-content-center py-5">
+        <input
+          id="city-search"
+          class="rounded-2 border-0"
+          type="text"
+          placeholder=" enter a city"
+        />
+        <button id="search-btn" class="ms-3 px-2 border-0 rounded-2">
+          search
+        </button>
+      </div>
+      <!-- info container -->
+      <div id="info-container" class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="location-data" class="p-1 border rounded-3">
+              <h3 class="px-0" id="location">
+                Hollandscheveld, hoogeveen, drenthe, NL
+              </h3>
+              <p class="" id="lat">lat: 52.7063</p>
+              <p class="" id="lon">lon: 6.5339</p>
+            </div>
+            <div class="my-4 p-1 border rounded-3">
+              <div class="d-flex flex-row align-items-center">
+                <img
+                  class=""
+                  id="weather-icon"
+                  src="./images/weather-app-logo-001.png"
+                  alt=""
+                />
+                <!-- <div></div> -->
+                <h3 id="temp" class="">no data&deg;C</h3>
+
+                <p id="weather-description" class="">no data</p>
+              </div>
+              <hr />
+              <div class="d-flex flex-row">
+                <p id="min-temp">no data</p>
+                <p id="max-temp">no data</p>
+                <p id="feels-like">no data</p>
+              </div>
+              <p id="humidity">no data</p>
+              <hr class="mb-1" />
+              <h3 class="mb-2">Wind</h3>
+              <p id="wind-direction">direction: no data</p>
+              <p id="wind-speed">speed: no data</p>
+            </div>
+          </div>
+          <!-- leaflet map -->
+          <div id="map-div" class="col-md-6">
+            <div id="map" class="m-auto rounded-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/scipt.js"></script>
+  </body>
+</html>
